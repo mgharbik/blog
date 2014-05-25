@@ -1,0 +1,3 @@
+== README
+
+Small blogger for Nima
