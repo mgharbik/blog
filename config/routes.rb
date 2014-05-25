@@ -1,4 +1,5 @@
 Nima::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   resources :posts, only: [:new, :index]
   
   # The priority is based upon order of creation: first created -> highest priority.
