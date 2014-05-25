@@ -43,3 +43,15 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# cucumber gems required
+group :test do
+  gem 'cucumber-rails', require:false
+  gem 'capybara'
+  gem 'database_cleaner'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
