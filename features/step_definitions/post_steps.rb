@@ -5,7 +5,7 @@ end
 When(/^I fill the new post form with valid data$/) do
 	fill_in "post_title", with: "My 2-months trip to latino america!"
   	fill_in "post_body", with: "This trip down to latino america took 2 months riding my motorcycle. The advanture stared by ..."
-  	fill_in "post_published", with: true
+  	check "post_published"
   	click_button "Create"
 end
 
