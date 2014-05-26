@@ -14,7 +14,7 @@ module PostsHelper
 
 	def post_date_item(post)
 		content_tag(:p, :class => 'blog-post-meta') do
-	    	post.created_at.to_s
+	    	post.created_at.to_formatted_s(:long) + " by #{post.user.email}"
 		end
 	end
 end
