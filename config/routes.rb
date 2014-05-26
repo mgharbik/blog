@@ -1,4 +1,5 @@
 Nima::Application.routes.draw do
+  devise_for :users
   mount Ckeditor::Engine => '/ckeditor'
   resources :posts, only: [:new, :create, :index]
   

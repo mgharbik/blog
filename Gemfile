@@ -12,6 +12,9 @@ gem "ckeditor"
 # Use paperclip for saving images inside post body
 gem "paperclip"
 
+# Use devise fro authentication
+gem 'devise'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
