@@ -1,0 +1,8 @@
+<h1>My blog posts</h1>
+<%= link_to 'New post', new_post_url %>
+
+<% @posts.each do |post| %>
+      <h2><%= post.title.html_safe %></h2>
+      <p><%= post.created_at %></p>
+      <p><%= post.body.html_safe %></p>
+<% end %>
