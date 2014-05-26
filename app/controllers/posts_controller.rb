@@ -10,7 +10,10 @@ class PostsController < ApplicationController
 	def create
 		@post = Post.new(post_params)
 	    if @post.save
-	    	redirect_to root_path, notice: "Post was created successfully"	    
+	    	redirect_to root_path, notice: "Post was created successfully"	
+	    else
+	    	render 'new'
+	    	flash[:error] = "Title and body should not be empty"
 	    end
 	end
 

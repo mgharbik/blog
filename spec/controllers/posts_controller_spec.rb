@@ -52,7 +52,22 @@ describe PostsController do
 	    #      	expect(flash[:notice]).not_to be_nil
 	    #    end
 	    #end
-	    
+
+	   	#context "when unvalid data" do
+	    #    before :each do
+		#       	post :create, post: params
+	    #      	post.stub(:save).and_return(false)
+	    #    end
+	    #    it "renders new template" do
+	    #      	expect(response).to render_template :new
+	    #    end
+	    #    it "assign flash[:error]" do
+	    #      	expect(flash[:error]).not_to be_nil
+	    #    end
+	    #    it "assigns @post variable" do
+        #  		expect(assigns[:post]).to eq(post)
+        #	end
+	    #end
     end
 
 end
