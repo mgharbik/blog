@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
+	before_action :authenticate!, only: [:new, :create]
 
 	def index
-		@posts = Post.where(published: true)
+		@posts = Post.published
 	end
 
 	def new
@@ -9,7 +10,7 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.new(post_params)
+		@post = current_user.posts.new(post_params)
 	    if @post.save
 	    	redirect_to root_path, notice: "Post was created successfully"	
 	    else
